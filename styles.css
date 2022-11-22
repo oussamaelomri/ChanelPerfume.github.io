@@ -1,0 +1,127 @@
+/* Start Variables */
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+/* End Global Rules */
+
+/* Start Container */
+.container {
+    width: 620px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container .image,
+.container .info {
+    flex-basis: 50%;
+}
+.container .image {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+.container .info {
+    padding: 30px;
+    background-color: var(--white);
+}
+.container .info h2 {
+    font-weight: normal;
+    color: var(--dark-grayish-blue);
+    font-size: 1em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.container .info h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    line-height: 1;
+}
+.container .info p {
+    line-height: 1.8;
+    color: var(--dark-grayish-blue);
+    font-size: 1.1em;
+}
+.container .info .new-price {
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+    font-size: 2.5em;
+    margin-right: 30px;
+}
+.container .info .old-price {
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+    position: relative;
+    top: -7px;
+}
+.container .info button {
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+}
+.container .info button:active {
+    outline: none;
+    background-color: hsl(158, 37%, 28%);
+}
+.container .info button img {
+    margin-right: 5px;
+    transform: translateY(3px);
+}
+@media (max-width: 767px) {
+    body {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .container {
+        display: block;
+        width: 355px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .container .image,
+    .container .info {
+        flex-basis: 100%;
+    }
+    .container .image {
+        height: 247px;
+        background-image: url(images/image-product-mobile.jpg);
+        max-width: 100%;
+
+    }
+}
+/* End Container */
+
